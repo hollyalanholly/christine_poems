@@ -1,0 +1,42 @@
+ .logo {
+        padding: 15px 0;
+    }
+
+.RightNav {
+
+    width: 100%;
+    height: 65px;
+    border-bottom: 2px solid #f1f1f1;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: column nowrap;
+}
+
+.linkcol {
+    color: black;
+}
+
+@media (max-width: 768px) {
+    .RightNav {
+
+        flex-flow: column nowrap;
+        background-color: #f1f1f7;
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 300px;
+        padding-top: 3.5rm;
+    }
+
+        .rightul {
+            color: slate-gray;
+            list-style: none;
+            display: flex;
+            flex-flow: row nowrap;
+        }
+    }
+
+
+    

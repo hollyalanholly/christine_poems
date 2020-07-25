@@ -1,37 +1,35 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import {
-  HashRouter,
   Link,
   BrowserRouter as Router,
   Route,
+  Switch,
 } from 'react-router-dom';
+
 import './App.css';
 
 import HomePage from './Pages/HomePage';
+import Poems from './Pages/Poems';
 import ContactMe from './Pages/ContactMe';
+import NavBar from './Nav/NavBar';
+import RightNavBar from './Nav/RightNavBar';
+import Burger from './Nav/Burger';
 
-class App extends Component {
-  render() {
+function App() {
     return (
-      <HashRouter basename='/'>
+      <Router>
         <div className="App">
+        <div>< NavBar /></div>
+        <div>< RightNavBar /></div>
 
-          <ul>
-            <li><Link to="/">HomePage</Link></li>
-            <li><Link to="contact_me">ContactMe</Link></li>
-          </ul>
-          <hr />
-
+          <Switch>
           <Route path="/" component={HomePage} exact />
+          <Route path="/Poems" component={Poems} />
           <Route path="/contact_me" component={ContactMe} />
+          </Switch>
         </div>
-      </HashRouter>
-    );
-  }
+      </Router>
+    )
 }
-
-// const HomePage = () => <div><h2>HomePage</h2></div>
-// const ContactMe = () => <div><h2>ContactMe</h2></div>
 
 export default App;

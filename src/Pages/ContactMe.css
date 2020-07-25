@@ -12,9 +12,10 @@ h1 {
     margin: 3px;
 }
 
-.contact_form_messagebox {
-    height: 250px;
-    
+textarea {
+    resize: none;
+    min-height: 50px;
+    max-height: 2300px;
 }
 
 .contact_form_button {

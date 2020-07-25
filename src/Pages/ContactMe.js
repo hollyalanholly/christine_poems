@@ -21,7 +21,7 @@ const ContactMe = () => (
 
                 <div className="row justify-content-center align-items-center" >
                     <div class="col-10">
-                        <input type="text" className="form-control contact_form_messagebox" placeholder="message" />
+                        <textarea type="textarea" className="form-control contact_form_messagebox" placeholder="please send me a message"></textarea>
                     </div>
                 </div>
 
