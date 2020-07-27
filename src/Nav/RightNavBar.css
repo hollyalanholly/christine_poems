@@ -3,40 +3,49 @@
     }
 
 .RightNav {
-
-    width: 100%;
-    height: 65px;
-    border-bottom: 2px solid #f1f1f1;
+    width: 80%;
+    max-width: 400px;
+    height: 80%;
+    background-color: #e4d2e4;
+    position: fixed;
+    top:0;
+    right:0;
     padding: 0 20px;
-    display: flex;
-    justify-content: space-between;
-    flex-flow: column nowrap;
+    z-index: 200;
+    box-shadow: 10px 10px 12px 0px rgba(0, 0, 0, 0.2);
+    transform: translateX(-100%);
+    transition: 0.3s ease-out;
+    /* transition is the length of time of an animation and ease out means start fast end slow */
+}
+
+.RightNav.open {
+    transform: translateX(0);
 }
 
 .linkcol {
     color: black;
 }
 
-@media (max-width: 768px) {
-    .RightNav {
+.rightul {
+    height: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #e4d2e4;
+    border: none;
+    
+}
 
-        flex-flow: column nowrap;
-        background-color: #f1f1f7;
-        position: fixed;
-        top: 0;
-        right: 0;
-        height: 100vh;
-        width: 300px;
-        padding-top: 3.5rm;
-    }
+.nav-item {
+    margin: 20px;
+    font-family: monospace;
+    font-size: 20px;
+}
 
-        .rightul {
-            color: slate-gray;
-            list-style: none;
-            display: flex;
-            flex-flow: row nowrap;
-        }
-    }
+.linkcol:hover, .linkcol:active {
+    color: #FF6347;
+} 
 
 
     

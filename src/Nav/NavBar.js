@@ -5,21 +5,21 @@ import { NavLink } from 'react-router-dom';
 import HamburgerMenu from 'react-hamburger-menu';
 import styled, { css } from 'styled-components';
 
+import RightNavBar from './RightNavBar';
+import Burger from './Burger';
+
 import './NavBar.css';
 
-const Nav = styled.nav`
-    
-`;
-
-
-const NavBar = () => {
+const NavBar = (props) => {
     return (
-        <Nav className ="Nav">
+        <nav className ="Nav">
             <div className="logo">
                 NavBar
             </div>
-            {/* < RightNavBar /> */}
-        </Nav>
+            {/* <div><RightNavBar/></div> */}
+            <div><Burger click ={props.rightBarClickHandler}/></div>
+        
+        </nav>
     )
 }
 
