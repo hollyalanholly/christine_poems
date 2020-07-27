@@ -3,7 +3,7 @@
     }
 
 .RightNav {
-    width: 80%;
+    width: 75%;
     max-width: 400px;
     height: 80%;
     background-color: #e4d2e4;
@@ -13,13 +13,14 @@
     padding: 0 20px;
     z-index: 200;
     box-shadow: 10px 10px 12px 0px rgba(0, 0, 0, 0.2);
-    transform: translateX(-100%);
+    transform: translateX(+100%);
+    /* this moves it right over to the left */
     transition: 0.3s ease-out;
     /* transition is the length of time of an animation and ease out means start fast end slow */
 }
 
 .RightNav.open {
-    transform: translateX(0);
+    transform: translateX(0); /* this is to have the RightNav in its normal postion when it opens */
 }
 
 .linkcol {
@@ -47,5 +48,12 @@
     color: #FF6347;
 } 
 
+/* if you are above 768 pixels */
+/* this gets rid of the side bar but keeps the backdrop */
+@media (min-width: 769px) {
+    .RightNav {
+        display: none
+}
+}
 
     
